@@ -27,7 +27,7 @@ from .steps.base import BaseTransformer
 
 def read_yaml(filepath):
     with open(filepath) as f:
-        config = yaml.load(f)
+        config = yaml.load(f, Loader=yaml.FullLoader)
     return AttrDict(config)
 
 

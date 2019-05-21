@@ -1,8 +1,12 @@
 import click
+#import neptune
 from src.pipeline_manager import PipelineManager
 
 pipeline_manager = PipelineManager()
+#neptune.init(api_token='eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vdWkubmVwdHVuZS5tbCIsImFwaV9rZXkiOiJjNWFhOGFiYy1lYjY1LTQ1YWQtYjZkZi1iYjhlODFmYTZkMjUifQ==', project_qualified_name='dlaraa/Mapping-Challenge')
 
+#neptune.create_experiment()
+#neptune.stop()
 
 @click.group()
 def main():

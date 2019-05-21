@@ -85,16 +85,18 @@ def train(pipeline_name, dev_mode, logger, params, seed):
 
     meta = pd.read_csv(os.path.join(params.meta_dir, 'stage{}_metadata.csv'.format(params.competition_stage)),
                        low_memory=False)
+    print(meta)
     meta_train = meta[meta['is_train'] == 1]
     meta_valid = meta[meta['is_valid'] == 1]
 
     train_mode = True
 
     meta_valid = meta_valid.sample(int(params.evaluation_data_sample), random_state=seed)
+    
 
     if dev_mode:
-        meta_train = meta_train.sample(20, random_state=seed)
-        meta_valid = meta_valid.sample(10, random_state=seed)
+        meta_train = meta_train.sample(n=20, random_state=seed)
+        meta_valid = meta_valid.sample(n=10, random_state=seed)
 
     if pipeline_name == 'scoring_model':
         train_mode = False
