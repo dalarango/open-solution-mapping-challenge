@@ -1,4 +1,4 @@
-project: WS_Houses
+project: dlaraa/Mapping-Challenge
 
 name: mapping_challenge_open_solution
 tags: [solution_5]
@@ -8,7 +8,7 @@ metric:
   goal: maximize
 
 #Comment out if not in Cloud Environment
-#pip-requirements-file: requirements.txt
+pip-requirements-file: requirements.txt
 
 exclude:
   - .git
@@ -33,7 +33,7 @@ parameters:
   load_in_memory: 0
   pin_memory: 1
   competition_stage: 1
-  api_key: YOUR_CROWDAI_API_KEY
+  api_key: eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vdWkubmVwdHVuZS5tbCIsImFwaV9rZXkiOiJjNWFhOGFiYy1lYjY1LTQ1YWQtYjZkZi1iYjhlODFmYTZkMjUifQ==
   evaluation_data_sample: 1000
   border_width: 0
   small_annotations_size: 14
@@ -63,7 +63,7 @@ parameters:
 
 # Training schedule
   epochs_nr: 100
-  batch_size_train: 5
+  batch_size_train: 20
   batch_size_inference: 20
   lr: 0.0005
   momentum: 0.9
