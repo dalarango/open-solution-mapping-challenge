@@ -63,7 +63,7 @@ parameters:
 
 # Training schedule
   epochs_nr: 100
-  batch_size_train: 20
+  batch_size_train: 5
   batch_size_inference: 20
   lr: 0.0005
   momentum: 0.9
